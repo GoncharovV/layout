@@ -1,6 +1,6 @@
 
 import { Fieldset, Form, FormActions } from '../lib';
-import { HStack, VStack } from '../lib/components/Stacks';
+import { HStack, Stack, VStack } from '../lib/components/Stacks';
 
 import '../lib/styles/index.css';
 
@@ -13,9 +13,16 @@ const Block = () => {
 export function Application() {
   return (
     <>
-      <HStack spacing="large-l" reversed centered>
-        <Block />
-        <Block />
+      <HStack
+        spacing="large-l"
+        reversed
+        centered
+      >
+        <Stack direction="row-reverse">
+          <Block />
+          <Block />
+        </Stack>
+
       </HStack>
 
       <VStack spacing="large-l" as="button" disabled>

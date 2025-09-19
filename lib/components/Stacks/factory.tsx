@@ -45,6 +45,8 @@ export interface BaseStackProps<TElementType extends ElementType = 'div'>
    */
   centered?: boolean;
 
+  width?: CSSProperties['width'];
+
   style?: CSSProperties;
   className?: string;
 }
@@ -84,6 +86,7 @@ export function createStack<TProps extends BaseStackProps>(
       p,
       pv,
       ph,
+      width,
       ...rest
     } = props;
 
@@ -102,6 +105,7 @@ export function createStack<TProps extends BaseStackProps>(
           flexWrap: wrap === true ? 'wrap' : wrap,
           alignItems: centered ? undefined : (alignItems ?? align),
           justifyContent: centered ? undefined : (justifyContent ?? justify),
+          width,
           ...getPaddingStyles({ p, pv, ph }),
           ...style,
         }}
