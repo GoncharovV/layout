@@ -22,7 +22,6 @@ export function Application() {
           <Block />
           <Block />
         </Stack>
-
       </HStack>
 
       <VStack spacing="large-l" as="button" disabled>
@@ -52,7 +51,6 @@ export function Application() {
       </Form>
 
       <div></div>
-
     </>
   );
 }
