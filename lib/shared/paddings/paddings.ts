@@ -5,12 +5,12 @@ import { getSpacingStyleVariable, Spacing } from '../spacings';
 
 export interface PropsWithPaddings {
   /**
-     * padding 
-     */
+   * padding 
+   */
   p?: Spacing;
   /**
-    * padding-horizontal. applies to `padding-left` and `padding-right`
-    */
+   * padding-horizontal. applies to `padding-left` and `padding-right`
+   */
   ph?: Spacing;
   /**
    * padding-vertical. applies to `padding-top` and `padding-bottom`
