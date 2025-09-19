@@ -7,7 +7,7 @@ export default [
   ...eslintConfig,
   ...eslintConfigReact,
 
-  { languageOptions: { globals: { ...globals.browser } } },
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
 
   {
     rules: {

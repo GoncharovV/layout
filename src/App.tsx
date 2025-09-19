@@ -11,7 +11,7 @@ const Block = () => {
 };
 
 
-function App() {
+export function Application() {
   return (
     <>
       <HStack spacing="large-l" reversed centered>
@@ -46,5 +46,3 @@ function App() {
     </>
   );
 }
-
-export default App;
