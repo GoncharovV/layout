@@ -1,0 +1,20 @@
+/*
+ * MUST keep in sync with the `shared/spacings/config.ts`
+ */
+
+:root {
+    --spacing-small-xxs: 0px;
+    --spacing-small-xs: 2px;
+    --spacing-small-s: 4px;
+    --spacing-small-m: 6px;
+    --spacing-small-l: 8px;
+    --spacing-medium-xs: 12px;
+    --spacing-medium-s: 16px;
+    --spacing-medium-m: 20px;
+    --spacing-medium-l: 24px;
+    --spacing-large-xxs: 32px;
+    --spacing-large-xs: 40px;
+    --spacing-large-s: 48px;
+    --spacing-large-m: 64px;
+    --spacing-large-l: 80px;
+}

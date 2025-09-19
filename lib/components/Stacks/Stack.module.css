@@ -1,0 +1,22 @@
+.stack {
+    display: flex;
+}
+
+.vertical {
+    flex-direction: column;
+}
+.vertical.reversed {
+    flex-direction: column-reverse;;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+.horizontal.reversed {
+    flex-direction: row-reverse;
+}
+
+.centered {
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "verbatimModuleSyntax": false,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "declaration": true,
+      "declarationMap": false,
+      "baseUrl": ".",
+      "paths": {
+        "~/*": ["src/*"]
+      },
+      "sourceMap": true,
+      "rootDir": "lib",
+      "jsx": "react-jsx",
+      "skipLibCheck": true,
+      "strict": true,
+      "outDir": "dist"
+    },
+    "include": ["lib"],
+  }

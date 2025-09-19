@@ -1,0 +1,37 @@
+{
+  "name": "@goncharovv/layout",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "gulp",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "classnames": "2.5.1"
+  },
+  "peerDependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@goncharovv/eslint-config": "1.0.6",
+    "@gravity-ui/gulp-utils": "1.0.3",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "eslint": "^9.35.0",
+    "globals": "16.4.0",
+    "gulp": "5.0.1",
+    "rimraf": "6.0.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.6"
+  }
+}
