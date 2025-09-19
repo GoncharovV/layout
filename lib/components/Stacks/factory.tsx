@@ -14,21 +14,21 @@ export interface BaseStackProps<TElementType extends ElementType = 'div'>
 
   alignItems?: CSSProperties['alignItems'];
   /**
-     * shortcut for `alignItems`
-     */
+   * shortcut for `alignItems`
+   */
   align?: CSSProperties['alignItems'];
 
   justifyContent?: CSSProperties['justifyContent'];
   /**
-     * shortcut for `justifyContent`
-     */
+   * shortcut for `justifyContent`
+   */
   justify?: CSSProperties['justifyContent'];
 
   /**
-     * `flex-wrap` property
-     *
-     * If value equals `true`, add css property `flex-wrap: wrap`;
-     */
+   * `flex-wrap` property
+   *
+   * If value equals `true`, add css property `flex-wrap: wrap`;
+   */
   wrap?: true | CSSProperties['flexWrap'];
 
   /**
@@ -56,9 +56,9 @@ export interface BaseStackProps<TElementType extends ElementType = 'div'>
  * `_TPropsHint` is used only to show in IDE list of own Stack props
  */
 export type StackPropsBuilder<TElementType extends ElementType, TProps, _TPropsHint = Prettify<TProps>> =
-  { as?: TElementType; }
-  & Omit<TProps, 'as'>
-  & Omit<ComponentProps<TElementType>, keyof Omit<TProps, 'as'>>;
+  { as?: TElementType; } &
+  Omit<TProps, 'as'> &
+  Omit<ComponentProps<TElementType>, keyof Omit<TProps, 'as'>>;
 
 export function createStack<TProps extends BaseStackProps>(
   name: string,
