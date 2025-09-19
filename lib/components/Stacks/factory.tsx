@@ -1,13 +1,15 @@
 import { ComponentProps, CSSProperties, ElementType, PropsWithChildren, ReactNode } from 'react';
 import cn from 'classnames';
 
+import { getPaddingStyles, PropsWithPaddings } from '../../shared/paddings';
 import { getSpacingStyles, PropsWithSpacing } from '../../shared/spacings';
 import { Prettify } from '../../shared/types';
 
 import styles from './Stack.module.css';
 
 
-export interface BaseStackProps<TElementType extends ElementType = 'div'> extends PropsWithChildren, PropsWithSpacing {
+export interface BaseStackProps<TElementType extends ElementType = 'div'>
+  extends PropsWithChildren, PropsWithSpacing, PropsWithPaddings {
   as?: TElementType;
 
   alignItems?: CSSProperties['alignItems'];
@@ -79,6 +81,9 @@ export function createStack<TProps extends BaseStackProps>(
       wrap,
       className,
       children,
+      p,
+      pv,
+      ph,
       ...rest
     } = props;
 
@@ -97,6 +102,7 @@ export function createStack<TProps extends BaseStackProps>(
           flexWrap: wrap === true ? 'wrap' : wrap,
           alignItems: centered ? undefined : (alignItems ?? align),
           justifyContent: centered ? undefined : (justifyContent ?? justify),
+          ...getPaddingStyles({ p, pv, ph }),
           ...style,
         }}
       >

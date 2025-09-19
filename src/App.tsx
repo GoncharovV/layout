@@ -2,7 +2,6 @@
 import { Fieldset, Form, FormActions } from '../lib';
 import { HStack, VStack } from '../lib/components/Stacks';
 
-import './App.css';
 import '../lib/styles/index.css';
 
 
@@ -24,7 +23,11 @@ export function Application() {
         <Block />
       </VStack>
 
-      <Form spacing="large-l">
+      <Form
+        spacing="large-l"
+        style={{ border: '1px solid black' }}
+        ph="large-l"
+      >
         <Fieldset spacing="small-xs">
           <Block />
           <Block />

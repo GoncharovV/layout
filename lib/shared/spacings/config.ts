@@ -10,10 +10,12 @@ export const spacings = {
   'small-s': 4,
   'small-m': 6,
   'small-l': 8,
+  'small-xl': 10,
   'medium-xs': 12,
   'medium-s': 16,
   'medium-m': 20,
   'medium-l': 24,
+  'medium-xl': 28,
   'large-xxs': 32,
   'large-xs': 40,
   'large-s': 48,
@@ -32,11 +34,13 @@ export interface PropsWithSpacing {
    *      - 'small-s': 4px
    *      - 'small-m': 6px
    *      - 'small-l': 8px
+   *      - 'small-xl': 10px
    * - medium:
    *      - 'medium-xs': 12px
    *      - 'medium-s': 16px
    *      - 'medium-m': 20px
    *      - 'medium-l': 24px
+   *      - 'medium-xl': 28px
    * - large:
    *      - 'large-xxs': 32px
    *      - 'large-xs': 40px
@@ -55,8 +59,16 @@ export function getSpacing(spacing: Spacing | undefined): number | undefined {
   return spacings[spacing];
 }
 
+export function getSpacingStyleVariable(spacing: Spacing | undefined): string | undefined {
+  if (!spacing) {
+    return undefined;
+  }
+
+  return `var(--spacing-${spacing})`;
+}
+
 export function getSpacingStyles(spacing: Spacing | undefined): CSSProperties {
   return {
-    gap: `var(--spacing-${spacing})`,
+    gap: getSpacingStyleVariable(spacing),
   };
 }
