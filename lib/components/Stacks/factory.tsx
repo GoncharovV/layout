@@ -36,6 +36,8 @@ export interface BaseStackProps<TElementType extends ElementType = 'div'>
    */
   gap?: number;
 
+  flex?: CSSProperties['flex'];
+
   /**
    * Alias for:
    * ```css
@@ -87,6 +89,7 @@ export function createStack<TProps extends BaseStackProps>(
       pv,
       ph,
       width,
+      flex,
       ...rest
     } = props;
 
@@ -106,6 +109,7 @@ export function createStack<TProps extends BaseStackProps>(
           alignItems: centered ? undefined : (alignItems ?? align),
           justifyContent: centered ? undefined : (justifyContent ?? justify),
           width,
+          flex,
           ...getPaddingStyles({ p, pv, ph }),
           ...style,
         }}
